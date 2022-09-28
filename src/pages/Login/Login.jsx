@@ -8,8 +8,8 @@ const Login = () => {
                     <div className="frase">
                         <h2>Envios a un <span>CLICK</span>  de distancia</h2>
                     </div>
-                    <div>
-                        <img src="login-instaya.png" alt="delivery" />
+                    <div className="p-4">
+                        <img className="delivery-foto pt-4" src="login-instaya.png" alt="delivery" />
                     </div>
                 </section>
                 <section className="login-form my-auto mx-auto p-4">
@@ -29,13 +29,13 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="row d-flex justify-content-center mt-5">
-                        <div className="text-center"><h6>¿no tienes una cuenta? crea una ahora mismo</h6></div>
-                        <div class="row d-flex justify-content-center mb-4">
-                            <button class="btn btn-primary col-md-10" type="submit">crear cuenta</button>
+                        <div className="text-center">
+                            <h6 className="crear-cuenta-frase p-2 fw-bold">¿no tienes una cuenta? crea una ahora mismo</h6>
+                        </div>
+                        <div class="row d-flex justify-content-center mb-4 mt-2">
+                            <button class="btn btn-primary col-md-10" type="submit">Crear Cuenta</button>
                         </div>
                     </div>
-
-
                 </section>
             </div>
         </>
