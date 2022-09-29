@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Test from './components/Test/Test';
+import CustomInput from './components/CustomInput/CustomInput';
 import Login from './pages/Login/Login';
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
         
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/test" element={<CustomInput placeholder='placeholder'/>} />
         </Routes>
         
       </BrowserRouter>
