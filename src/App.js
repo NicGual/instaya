@@ -1,6 +1,7 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import CustomInput from './components/CustomInput/CustomInput';
 import Login from './pages/Login/Login';
+import Registro from './pages/Registro/Registro';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/test" element={<CustomInput placeholder='placeholder'/>} />
+          <Route path="/registro" element={<Registro/>} />
         </Routes>
         
       </BrowserRouter>

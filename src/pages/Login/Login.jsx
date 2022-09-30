@@ -3,6 +3,16 @@ import CustomButton from "../../components/CustomButton/CustomButton";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import './Login.css'
 const Login = () => {
+    const iniciarSesion = (e) => {
+        e.preventDefault()
+        const formulario = {}
+        formulario.nombreUsuario= document.getElementById("usuario").value
+        formulario.contraseña= document.getElementById("contraseña").value
+        console.log(formulario)
+    }
+    const redireccionRegistro = () =>{
+        window.location.href="/registro"
+    }
     return (
         <>
             <div className="login-page d-flex container">
@@ -20,13 +30,13 @@ const Login = () => {
                     </div>
                     <form className="d-flex justify-content-center form-group row mb-5">
                         <div className=" mb-3 col-md-10">
-                            <CustomInput placeholder="Usuario" type="text"/>
+                            <CustomInput placeholder="Usuario" type="text" name="usuario" id="usuario"/>
                         </div>
                         <div className=" mb-3 col-md-10">
-                            <CustomInput placeholder="Contraseña" type="password"/>
+                            <CustomInput placeholder="Contraseña" type="password" name="contraseña" id="contraseña"/>
                         </div>                       
                         <div class="row d-flex justify-content-center mb-4 mt-4">
-                            <CustomButton className="col-md-10" type="submit" placeholder="Iniciar Sesion"/>
+                            <CustomButton className="col-md-10" type="submit" placeholder="Iniciar Sesion" onclick={iniciarSesion}/>
                         </div>
                     </form>
                     <div className="row d-flex justify-content-center mt-5">
@@ -34,7 +44,7 @@ const Login = () => {
                             <h6 className="crear-cuenta-frase p-2 fw-bold">¿no tienes una cuenta? crea una ahora mismo</h6>
                         </div>                        
                         <div class="row d-flex justify-content-center mb-4">
-                            <CustomButton className="col-md-10"  placeholder="Crear Cuenta"/>
+                            <CustomButton className="col-md-10"  placeholder="Crear Cuenta" onclick={redireccionRegistro}/>
                         </div>
                     </div>
                 </section>
