@@ -1,8 +1,6 @@
 import React, { Fragment, useState, useRef, useEffect } from "react";
 
-//import { TodoItem } from "./TodoItem";
-
-export function Solicitudes() {
+export function Seguimiento() {
   return (
     <Fragment>
       <div className='sidenav'>
