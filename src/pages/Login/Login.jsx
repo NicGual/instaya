@@ -6,7 +6,7 @@ const Login = () => {
     const iniciarSesion = (e) => {
         e.preventDefault()
         const formulario = {}
-        formulario.nombreUsuario= document.getElementById("usuario").value
+        formulario.nombreUsuario= document.getElementById("correo").value
         formulario.contraseña= document.getElementById("contraseña").value
         console.log(formulario)
     }
@@ -30,7 +30,7 @@ const Login = () => {
                     </div>
                     <form className="d-flex justify-content-center form-group row mb-5">
                         <div className=" mb-3 col-md-10">
-                            <CustomInput placeholder="Usuario" type="text" name="usuario" id="usuario"/>
+                            <CustomInput placeholder="Correo" type="email" name="correo" id="correo"/>
                         </div>
                         <div className=" mb-3 col-md-10">
                             <CustomInput placeholder="Contraseña" type="password" name="contraseña" id="contraseña"/>
