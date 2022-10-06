@@ -26,7 +26,7 @@ const Login = () => {
                 </section>
                 <section className="login-form my-auto mx-auto p-4">
                     <div className="logo d-flex justify-content-center mb-5 mt-3">
-                        <img src="logo.png" alt="logo" />
+                        <a href="/"><img src="logo.png" alt="logo" /></a>
                     </div>
                     <form className="d-flex justify-content-center form-group row mb-5">
                         <div className=" mb-3 col-md-10">

@@ -1,14 +1,15 @@
 import React, { Fragment, useState, useRef, useEffect } from "react";
+import './seguimiento.css'
 
 export function Seguimiento() {
   return (
     <Fragment>
       <div className='sidenav'>
         <nav className="nav flex-column">
-          <a href="#"> <img src="logo.svg" alt="logo" id="logo"/></a>
-          <a className="nav-link active" href="#">Inicio</a>
-          <a className="nav-link" href="#">Registrar solicitud</a>
-          <a className="nav-link" href="#">Seguimiento de solicitud</a>
+          <a href="/"> <img src="logo.svg" alt="logo" id="logo"/></a>
+          <a className="nav-link active" href="/">Inicio</a>
+          <a className="nav-link" href="seguimiento">Registrar solicitud</a>
+          <a className="nav-link" href="registro-paquete">Seguimiento de solicitud</a>
           </nav>
       </div>
       <div className='main'>
