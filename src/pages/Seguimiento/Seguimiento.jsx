@@ -8,8 +8,8 @@ export function Seguimiento() {
         <nav className="nav flex-column">
           <a href="/"> <img src="logo.svg" alt="logo" id="logo"/></a>
           <a className="nav-link active" href="/">Inicio</a>
-          <a className="nav-link" href="seguimiento">Registrar solicitud</a>
-          <a className="nav-link" href="registro-paquete">Seguimiento de solicitud</a>
+          <a className="nav-link" href="registro-paquete">Registrar solicitud</a>
+          <a className="nav-link" href="seguimiento">Seguimiento de solicitud</a>
           </nav>
       </div>
       <div className='main'>
