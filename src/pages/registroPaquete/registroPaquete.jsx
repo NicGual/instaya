@@ -1,10 +1,21 @@
 import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import './registroPaquete.css'
+import "./registroPaquete.css";
+import NavBarComp from "../../components/NavbarComp/NavbarComp";
+
 const Formulario = () => {
   const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
   return (
     <>
+      <NavBarComp> </NavBarComp>
+      <header>
+        {" "}
+        <div className="Cabecera">
+          {" "}
+          <h1> REGISTRO DE PAQUETE </h1>{" "}
+        </div>{" "}
+      </header>
+      <div className="cuadro"> </div>
       <Formik
         initialValues={{
           dimensionPaquete: "",
@@ -29,14 +40,28 @@ const Formulario = () => {
       >
         {({ errors }) => (
           <Form className="formulario">
+            <form>
+              <label>
+                <h4> Ingrese descripcion del paquete: </h4>
+                <input type="text" name="name" />
+              </label>
+            </form>
             <div>
-              <label htmlFor="dimensionPaquete">dimensionPaquete</label>
-              <Field
-                type="text"
-                id="dimensionPaquete"
-                name="dimensionPaquete"
-                placeholder="1x1 cm"
-              />
+              <div className="enunciados">
+                {" "}
+                <label htmlFor="dimensionPaquete">
+                  Dimensiones del paquete
+                </label>{" "}
+              </div>
+              <div className="campos">
+                {" "}
+                <Field
+                  type="text"
+                  id="dimensionPaquete"
+                  name="dimensionPaquete"
+                  placeholder="1x1 cm"
+                />{" "}
+              </div>
               <ErrorMessage
                 name="dimensionPaquete"
                 component={() => (
@@ -45,13 +70,19 @@ const Formulario = () => {
               />
             </div>
             <div>
-              <label htmlFor="ciudadPartida">ciudadPartida</label>
-              <Field
-                type="text"
-                id="ciudadPartida"
-                name="ciudadPartida"
-                placeholder="Bogota"
-              />
+              <div className="enunciados">
+                {" "}
+                <label htmlFor="ciudadPartida">Ciudad de Partida</label>{" "}
+              </div>
+              <div className="campos">
+                {" "}
+                <Field
+                  type="text"
+                  id="ciudadPartida"
+                  name="ciudadPartida"
+                  placeholder="Bogota"
+                />{" "}
+              </div>
               <ErrorMessage
                 name="ciudadPartida"
                 component={() => (
@@ -60,13 +91,18 @@ const Formulario = () => {
               />
             </div>
             <div>
-              <label htmlFor="ciudadDestino">ciudadDestino</label>
-              <Field
-                type="text"
-                id="ciudadDestino"
-                name="ciudadDestino"
-                placeholder="Tunja"
-              />
+              <div className="enunciados">
+                {" "}
+                <label htmlFor="ciudadDestino">Ciudad de destino</label>{" "}
+              </div>
+              <div className="campos">
+                <Field
+                  type="text"
+                  id="ciudadDestino"
+                  name="ciudadDestino"
+                  placeholder="Tunja"
+                />{" "}
+              </div>
               <ErrorMessage
                 name="ciudadDestino"
                 component={() => (
@@ -75,13 +111,18 @@ const Formulario = () => {
               />
             </div>
             <div>
-              <label htmlFor="remitente">remitente</label>
-              <Field
-                type="text"
-                id="remitente"
-                name="remitente"
-                placeholder="Pancracia Tocarruncho"
-              />
+              <div className="enunciados">
+                {" "}
+                <label htmlFor="remitente">Remitente</label>{" "}
+              </div>
+              <div className="campos">
+                <Field
+                  type="text"
+                  id="remitente"
+                  name="remitente"
+                  placeholder="Pancracia Tocarruncho"
+                />{" "}
+              </div>
               <ErrorMessage
                 name="remitente"
                 component={() => (
@@ -90,13 +131,20 @@ const Formulario = () => {
               />
             </div>
             <div>
-              <label htmlFor="direccionRecibe">direccion de recibo</label>
-              <Field
-                type="text"
-                id="direccionRecibe"
-                name="direccionRecibe"
-                placeholder="Pancracia Tocarruncho"
-              />
+              <div className="enunciados">
+                {" "}
+                <label htmlFor="direccionRecibe">
+                  Direccion de recibo
+                </label>{" "}
+              </div>
+              <div className="campos">
+                <Field
+                  type="text"
+                  id="direccionRecibe"
+                  name="direccionRecibe"
+                  placeholder="fake street 123"
+                />{" "}
+              </div>
               <ErrorMessage
                 name="direccionRecibe"
                 component={() => (
@@ -105,13 +153,19 @@ const Formulario = () => {
               />
             </div>
             <div>
-              <label htmlFor="pesoPaquete">peso del paquete</label>
-              <Field
-                type="text"
-                id="pesoPaquete"
-                name="pesoPaquete"
-                placeholder="1kg"
-              />
+              <div className="enunciados">
+                {" "}
+                <label htmlFor="pesoPaquete">Peso del paquete</label>{" "}
+              </div>
+              <div className="campos">
+                {" "}
+                <Field
+                  type="text"
+                  id="pesoPaquete"
+                  name="pesoPaquete"
+                  placeholder="1kg"
+                />{" "}
+              </div>
               <ErrorMessage
                 name="pesoPaquete"
                 component={() => (
@@ -120,10 +174,10 @@ const Formulario = () => {
               />
             </div>
             <div>
-              <label>
+              <label htmlFor="EnvioRapido">
+                {" "}
+                Envio Rapido
                 <Field type="radio" name="envioRapido" value="Si" /> Si
-              </label>
-              <label>
                 <Field type="radio" name="envioRapido" value="No" /> No
               </label>
             </div>
